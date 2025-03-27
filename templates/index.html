@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Verge - Latest Tech Headlines</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: white; color: black; }
+        .container { width: 50%; margin: auto; padding-top: 20px; }
+        h1 { text-align: center; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        a { text-decoration: none; color: black; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Verge - Latest Tech Headlines</h1>
+        <ul>
+            {% for title, link, date in articles %}
+                <li>
+                    <a href="{{ link }}" target="_blank">{{ title }}</a> <small>({{ date }})</small>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
